@@ -28,7 +28,7 @@ public class TPAccept implements CommandExecutor {
                 NameOf.remove(D.getDisplayName());
             }
             else {
-                D.sendMessage(ChatColor.BLACK +"You have no pending TPA requests.");
+                D.sendMessage(ChatColor.RED +"You have no pending TPA requests.");
             }
         }
 

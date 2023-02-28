@@ -17,6 +17,7 @@ public final class TPAPlugin extends JavaPlugin {
     public void onEnable() {
         getCommand("tpa").setExecutor(new TPRequest());
         getCommand("tpaccept").setExecutor(new TPAccept());
+        getCommand("tpdeny").setExecutor(new TPDeny());
 
 
         // Plugin startup logic

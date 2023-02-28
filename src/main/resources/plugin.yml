@@ -9,5 +9,9 @@ commands:
        description: Use this command to teleport to someone.
        usage: /<command> <name>
     tpaccept:
-      description: Use this command to teleport to someone.
+      description: Use this command to accept the teleportation request of someone.
       usage: /<command>
+    tpdeny:
+      description: Use this command to deny the teleportation request of someone.
+      usage: /<command>
+
