@@ -12,12 +12,12 @@ import static me.almost.tpaplugin.TPAPlugin.NameOf;
 public class TPDeny implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player D) {
-            if (TpVerifier.get(D.getDisplayName())) {
-                TpVerifier.remove(TpList.get(D.getDisplayName()));
-                TpList.remove(NameOf.get(D.getDisplayName()));
-                NameOf.remove(D.getDisplayName());
-                D.sendMessage(ChatColor.RED+"You have denied the teleportation request of "+ NameOf.get(D.getDisplayName()));
+        if (sender instanceof Player receiver) {
+            if (TpVerifier.get(receiver.getDisplayName())) {
+                TpVerifier.remove(TpList.get(receiver.getDisplayName()));
+                TpList.remove(NameOf.get(receiver.getDisplayName()));
+                NameOf.remove(receiver.getDisplayName());
+                receiver.sendMessage(ChatColor.RED+"You have denied the teleportation request of "+ NameOf.get(receiver.getDisplayName()));
             }
         }
         return true;
