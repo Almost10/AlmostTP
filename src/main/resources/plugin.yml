@@ -1,0 +1,13 @@
+name: AlmostTP
+version: '${project.version}'
+main: me.almost.tpaplugin.TPAPlugin
+api-version: 1.19
+authors: [ AlmostMee ]
+description: A simple TP plugin.
+commands:
+    tpa:
+       description: Use this command to teleport to someone.
+       usage: /<command> <name>
+    tpaccept:
+      description: Use this command to teleport to someone.
+      usage: /<command>
