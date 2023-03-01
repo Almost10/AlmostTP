@@ -17,7 +17,7 @@ public class TPDeny implements CommandExecutor {
                 TpVerifier.remove(TpList.get(receiver.getDisplayName()));
                 TpList.remove(NameOf.get(receiver.getDisplayName()));
                 NameOf.remove(receiver.getDisplayName());
-                receiver.sendMessage(ChatColor.RED+"You have denied the teleportation request of "+ NameOf.get(receiver.getDisplayName()));
+                receiver.sendMessage(ChatColor.RED+"You have denied the teleportation request");
             }
         }
         return true;

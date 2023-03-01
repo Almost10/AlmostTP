@@ -16,17 +16,17 @@ public class TPRequest implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player pal) {
             if (!TpList.containsKey(pal.getDisplayName())) {
-                if (NameOf.containsKey(pal.getDisplayName())) {
+                Player receiver = Bukkit.getPlayer(args[0]);
+                if (NameOf.containsKey(receiver.getDisplayName())) {
                     pal.sendMessage(ChatColor.RED+ "This person already has a pending TP request.");
-                    Player pall = Bukkit.getPlayer(args[0]);
-                    pall.sendMessage(ChatColor.RED+" "+pal.getDisplayName()+ " sent you a tp request but you have one already pending, please /tpdeny that one to be able to accept another. ");
+                    receiver.sendMessage(ChatColor.RED+" "+pal.getDisplayName()+ " sent you a tp request but you have one already pending, please /tpdeny that one to be able to accept another. ");
 
                 }
                 else {
                     TpList.put(pal.getDisplayName(), args[0]);
                     NameOf.put(args[0], pal.getDisplayName());
                     TPAPlugin.getPlugin().getLogger().info(TpList.get(pal.getDisplayName()));
-                    TpVerifier.put(TpList.get(pal.getDisplayName()), true);
+                    TpVerifier.put(args[0], true);
                     pal.sendMessage(ChatColor.GREEN + "You have sent a teleportation request to " + TpList.get(pal.getDisplayName()));
                     Player pal2 = Bukkit.getPlayer(args[0]);
 
