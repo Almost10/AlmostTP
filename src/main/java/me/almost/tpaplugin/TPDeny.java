@@ -13,8 +13,7 @@ public class TPDeny implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player receiver) {
-            if (TpVerifier.get(receiver.getDisplayName())) {
-                TpVerifier.remove(TpList.get(receiver.getDisplayName()));
+            if (TpList.containsValue(receiver)) {
                 TpList.remove(NameOf.get(receiver.getDisplayName()));
                 NameOf.remove(receiver.getDisplayName());
                 receiver.sendMessage(ChatColor.RED+"You have denied the teleportation request");
