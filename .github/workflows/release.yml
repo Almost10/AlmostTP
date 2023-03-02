@@ -1,8 +1,7 @@
 name: '🧑‍🏭'
-on: [ push, workflow_dispatch ]
+on: [ workflow_dispatch ]
 jobs:
   release:
-    if: startsWith(github.ref, 'refs/tags/v') == true
     runs-on: ubuntu-22.04
     steps:
       - name: Git checkout
