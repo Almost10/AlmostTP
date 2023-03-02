@@ -7,7 +7,6 @@ import java.util.Map;
 
 public final class TPAPlugin extends JavaPlugin {
     static Map<String, String> TpList = new HashMap<>();
-    static Map<String, Boolean> TpVerifier = new HashMap<>();
     static Map<String, String> NameOf = new HashMap<>();
     public static TPAPlugin getPlugin() {
         return getPlugin(TPAPlugin.class);

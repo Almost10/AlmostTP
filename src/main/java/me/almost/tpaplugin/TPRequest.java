@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import static me.almost.tpaplugin.TPAPlugin.TpList;
-import static me.almost.tpaplugin.TPAPlugin.TpVerifier;
 import  static me.almost.tpaplugin.TPAPlugin.NameOf;
 
 public class TPRequest implements CommandExecutor {
@@ -26,7 +25,6 @@ public class TPRequest implements CommandExecutor {
                     TpList.put(pal.getDisplayName(), args[0]);
                     NameOf.put(args[0], pal.getDisplayName());
                     TPAPlugin.getPlugin().getLogger().info(TpList.get(pal.getDisplayName()));
-                    TpVerifier.put(args[0], true);
                     pal.sendMessage(ChatColor.GREEN + "You have sent a teleportation request to " + TpList.get(pal.getDisplayName()));
                     Player pal2 = Bukkit.getPlayer(args[0]);
 
