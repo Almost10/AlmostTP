@@ -1,0 +1,2 @@
+This is a TPA plugin that fixes the issue with some plugins (Essentials etc) where if a player is sent two TPs both of them are accepted on /tpaccept, in this plugin at one time only one tp request can be sent to a player which a player can accept or deny to get another.
+This is still in BETA and as of right now there are no bugs. IF you find a bug please message me on discord (Almost#6300) and I'll fix it.
