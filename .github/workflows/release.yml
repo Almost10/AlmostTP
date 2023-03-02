@@ -1,5 +1,5 @@
 name: '🧑‍🏭'
-on: [ push ]
+on: [ push, workflow_dispatch ]
 jobs:
   release:
     if: startsWith(github.ref, 'refs/tags/v') == true
