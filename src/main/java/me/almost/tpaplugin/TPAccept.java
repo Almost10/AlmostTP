@@ -13,7 +13,7 @@ public class TPAccept implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player receiver) {
-            if (TpList.containsValue(receiver)) {
+            if (TpList.containsValue(receiver.getDisplayName())) {
                 TPAPlugin.getPlugin().getLogger().info("tp "+NameOf.get(receiver.getDisplayName())+" "+receiver.getDisplayName());
                 Player Teleporter1 = Bukkit.getPlayer(NameOf.get(receiver.getDisplayName()));
                 Player Teleporter2 = Bukkit.getPlayer(receiver.getDisplayName());
